@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #1a2332;
+  background: #ffffff;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+}
+
+/* Section breaks, simplified on small screens */
+.clip-diag {
+  clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
+}
+.clip-diag-top {
+  clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+}
+@media (min-width: 768px) {
+  .clip-diag {
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+  }
+  .clip-diag-top {
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #f0a35e;
+  outline-offset: 3px;
+}
